@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <meta-data android:name="OnlineMaps.Key" android:value="1t9fq9q3804DLRKAgK6exHbS8BKXQbtx" />
+        <meta-data android:name="OnlineTraffic.Key" android:value="1t9fq9q3804DLRKAgK6exHbS8BKXQbtx" />
+        <meta-data android:name="OnlineSearch.Key" android:value="1t9fq9q3804DLRKAgK6exHbS8BKXQbtx" />
+        <meta-data android:name="OnlineRouting.Key" android:value="1t9fq9q3804DLRKAgK6exHbS8BKXQbtx" />
+
     </application>
 
 </manifest>

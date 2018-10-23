@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -25,4 +26,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //library required to display map
+    api("com.tomtom.online:sdk-maps:2.+")
+    //library required for search
+    api("com.tomtom.online:sdk-search:2.+")
+    //library required for routing
+    api("com.tomtom.online:sdk-routing:2.+")
+    //library required for traffic
+    api("com.tomtom.online:sdk-traffic:2.+")
 }
