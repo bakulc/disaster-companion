@@ -3,7 +3,7 @@ package com.example.bakul.disastercompanion;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class conversation extends AppCompatActivity {
+public class Conversation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
