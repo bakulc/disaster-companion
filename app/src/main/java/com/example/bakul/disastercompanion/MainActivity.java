@@ -1,5 +1,7 @@
 package com.example.bakul.disastercompanion;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +16,11 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
+    NavigationView navMain;
+   // Intent navMainActivityIntent = new Intent(this, MainActivity.class);
+   // Intent navConversationIntent = new Intent(this, Conversation.class);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +33,21 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        
+        navMain = findViewById(R.id.nav_main);
+           navMain.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        menuItem.setChecked(true);
+        //                startActivity(navMainActivityIntent);
+                        return true;
+                    }
+                }
+        );
+
     }
 
-    @Override
+
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
